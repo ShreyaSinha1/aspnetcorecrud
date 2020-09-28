@@ -12,8 +12,12 @@ namespace WebApplication.Entitites
     {
         [Key]
         public int Id { get; set; }
+<<<<<<< HEAD
         [Required]
         [MaxLength(50,ErrorMessage ="Category Name should be required")]
+=======
+
+>>>>>>> 457306fd5bd0d4c22be82a3425bb71a54fd3492b
         public string CategoryName { get; set; }
 
         public bool ActiveInactive { get; set; }
