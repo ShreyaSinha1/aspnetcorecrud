@@ -13,18 +13,8 @@ namespace WebApplication.Models
         [Key]
         public int Id { get; set; }
 
-<<<<<<< HEAD
         [Required]
         [MaxLength(50, ErrorMessage = "Product  Name should be required")]
-
-=======
-<<<<<<< HEAD
-        [Required]
-        [MaxLength(50, ErrorMessage = "Product  Name should be required")]
-
-=======
->>>>>>> 457306fd5bd0d4c22be82a3425bb71a54fd3492b
->>>>>>> f963073ffca7a9008e1eb3270ddc308a4459e2c6
         public string ProductName { get; set; }
 
         public string Category { get; set; }
