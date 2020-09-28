@@ -26,6 +26,7 @@ namespace WebApplication.Controllers
         [Route("GetAllProductCategory")]
         public IActionResult GetAllProductCategory()
         {
+<<<<<<< HEAD
             IEnumerable<ProductCategory> productCategory;
             try
             {
@@ -37,12 +38,16 @@ namespace WebApplication.Controllers
                 return StatusCode(500, "Internal Server Error. Somthing went Wrong!");
 
             }
+=======
+            IEnumerable<ProductCategory> productCategory = _productRepository.GetAllProductCategory();
+>>>>>>> 457306fd5bd0d4c22be82a3425bb71a54fd3492b
             return Ok(productCategory);
         }
         [HttpPost]
         [Route("GetAllProductCategoryName")]
         public IActionResult GetAllProductCategoryName(string categoryName)
         {
+<<<<<<< HEAD
             IEnumerable<ProductCategory> productCategory;
             try
             {
@@ -55,12 +60,16 @@ namespace WebApplication.Controllers
                 return StatusCode(500, "Internal Server Error. Somthing went Wrong!");
 
             }
+=======
+            IEnumerable<ProductCategory> productCategory = _productRepository.GetAllProductCategoryName(categoryName);
+>>>>>>> 457306fd5bd0d4c22be82a3425bb71a54fd3492b
             return Ok(productCategory);
         }
         [HttpPost]
         [Route("AddProductCategory")]
         public IActionResult AddProductCategory(ProductCategory prod)
         {
+<<<<<<< HEAD
             try
             {
                 _productRepository.AddProductCategory(prod);
@@ -73,11 +82,16 @@ namespace WebApplication.Controllers
 
             }
            // return Ok("saved");
+=======
+            _productRepository.AddProductCategory(prod);
+            return Ok("saved");
+>>>>>>> 457306fd5bd0d4c22be82a3425bb71a54fd3492b
         }
         [HttpPost]
         [Route("UpdateProductCategory")]
         public IActionResult UpdateProductCategory(ProductCategory prod)
         {
+<<<<<<< HEAD
             try {
                 _productRepository.UpdateProductCategory(prod);
                 return StatusCode(200, "Saved");
@@ -88,12 +102,16 @@ namespace WebApplication.Controllers
                 return StatusCode(500, "Internal Server Error. Somthing went Wrong!");
 
             }
+=======
+            _productRepository.UpdateProductCategory(prod);
+>>>>>>> 457306fd5bd0d4c22be82a3425bb71a54fd3492b
             return Ok("updated");
         }
         [HttpPost]
         [Route("DeleteProductCategory")]
         public IActionResult DeleteProductCategory(ProductCategory prod)
         {
+<<<<<<< HEAD
             try
             {
                 _productRepository.DeleteProductCategory(prod);
@@ -106,6 +124,10 @@ namespace WebApplication.Controllers
 
             }
             //return Ok("deleted");
+=======
+        _productRepository.DeleteProductCategory(prod);
+            return Ok("deleted");
+>>>>>>> 457306fd5bd0d4c22be82a3425bb71a54fd3492b
         }
     }
 }
